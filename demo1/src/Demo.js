@@ -9,7 +9,15 @@ export default class Demo extends Component {
     }
     render(){
         return(
-            <h1>{this.state.name}</h1>
+            <>
+                <h1>{this.state.name}</h1>
+                <input type="text" onChange={(e)=>{
+                    this.setState({
+                        name: e.target.value
+                    })
+                }}/>
+            </>
+
         )
     }
 }
