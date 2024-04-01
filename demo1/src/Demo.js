@@ -1,10 +1,15 @@
 import {Component} from "react";
 
-export default class Demo extends Component{
-    render() {
+export default class Demo extends Component {
+    constructor() {
+        super();
+        this.state = {
+            name: "Hello C1023H1"
+        }
+    }
+    render(){
         return(
-            <h1>Hello World</h1>
+            <h1>{this.state.name}</h1>
         )
     }
-
 }
