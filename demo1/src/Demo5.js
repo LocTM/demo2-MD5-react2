@@ -1,25 +1,23 @@
 import {Component} from "react";
 
-export default class Demo4 extends Component{
+export default class Demo5 extends Component{
     constructor() {
         super();
         this.state = {
-            name: "ABC"
+            name: "Demo5 change name"
         }
     }
     render() {
-        return(
-            <>
+        return (
+            <div>
                 <h1>{this.state.name}</h1>
-                <input type="text" onChange={(e) =>{
-                    console.log(e.target.value)
+                <input type="text" onChange={(e)=>{
                     this.setState({
                         name: e.target.value
-                    })
+                        }
+                    )
                 }}/>
-            </>
-
-
-        )
+            </div>
+        );
     }
 }
